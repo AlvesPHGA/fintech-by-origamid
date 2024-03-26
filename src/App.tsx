@@ -6,8 +6,10 @@ function App() {
    return (
       <>
          <Sidenav />
-         <Header />
-         <Home />
+         <main>
+            <Header />
+            <Home />
+         </main>
       </>
    );
 }
