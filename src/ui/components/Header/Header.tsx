@@ -1,3 +1,9 @@
+import { DataRange } from '../DataRange/DataRange';
+
 export const Header = () => {
-   return <header>Header</header>;
+   return (
+      <header>
+         <DataRange />
+      </header>
+   );
 };

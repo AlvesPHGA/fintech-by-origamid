@@ -4,8 +4,8 @@ export const DataRange = () => {
    return (
       <form>
          <div>
-            <DataInput legend="Inicio" id="begin" />
-            <DataInput legend="Final" id="end" />
+            <DataInput legend="Inicio" id="begin" type="date" />
+            <DataInput legend="Final" id="end" type="date" />
          </div>
       </form>
    );
