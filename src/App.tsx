@@ -5,7 +5,7 @@ import { Sidenav } from './ui/components/Sidenav/Sidenav';
 
 function App() {
    return (
-      <>
+      <section className="m-0 text-color-2 bg-color-4 font-sans">
          <DataContextProvider>
             <Sidenav />
             <main>
@@ -13,7 +13,7 @@ function App() {
                <Home />
             </main>
          </DataContextProvider>
-      </>
+      </section>
    );
 }
 
