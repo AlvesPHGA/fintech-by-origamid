@@ -1,12 +1,13 @@
 import React from 'react';
 import { DataInput } from '../Form/DataInput';
+import { form } from '../../styles/formStyles';
 
 export const DataRange = () => {
    const [begin, setBegin] = React.useState('');
    const [end, setEnd] = React.useState('');
 
    return (
-      <form className="p-5 rounded-[1.25rem] bg-white">
+      <form className={form()}>
          <div>
             <DataInput
                legend="Inicio"
