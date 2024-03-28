@@ -6,7 +6,7 @@ export const DataRange = () => {
    const [end, setEnd] = React.useState('');
 
    return (
-      <form>
+      <form className="p-5 rounded-[1.25rem] bg-white">
          <div>
             <DataInput
                legend="Inicio"

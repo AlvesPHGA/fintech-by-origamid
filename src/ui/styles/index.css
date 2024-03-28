@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+   h1,
+   h2,
+   h3 {
+      @apply font-semibold m-0;
+   }
+
+   ul {
+      @apply list-none p-0 m-0;
+   }
+}

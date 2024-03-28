@@ -7,11 +7,13 @@ function App() {
    return (
       <section className="m-0 text-color-2 bg-color-4 font-sans">
          <DataContextProvider>
-            <Sidenav />
-            <main>
-               <Header />
-               <Home />
-            </main>
+            <section className="grid space-y-5 p-5">
+               <Sidenav />
+               <main>
+                  <Header />
+                  <Home />
+               </main>
+            </section>
          </DataContextProvider>
       </section>
    );
