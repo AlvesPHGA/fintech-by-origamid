@@ -11,3 +11,7 @@ export const labelStyle = tv({
 export const inputStyle = tv({
    base: 'border-0 font-mono text-color-2 px-3 py-2.5 bg-color-4 rounded-[1.25rem]',
 });
+
+export const buttonStyle = tv({
+   base: 'py-2.5 px-5 bg-color-3 border-none rounded-[1.25rem] text-color-2 font-semibold capitalize',
+});
