@@ -1,10 +1,19 @@
 import { DataInputProps } from '../../../data/@types/IForm';
+import { inputStyle, labelStyle } from '../../styles/formStyles';
 
 export const DataInput = ({ legend, id, ...props }: DataInputProps) => {
    return (
-      <div>
-         <label htmlFor={id}>{legend}</label>
-         <input id={id} name={id} type="text" {...props} />
+      <div className="space-y-5">
+         <label htmlFor={id} className={labelStyle()}>
+            {legend}
+         </label>
+         <input
+            id={id}
+            name={id}
+            type="text"
+            className={inputStyle()}
+            {...props}
+         />
       </div>
    );
 };

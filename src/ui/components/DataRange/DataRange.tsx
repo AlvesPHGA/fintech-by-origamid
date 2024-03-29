@@ -8,7 +8,7 @@ export const DataRange = () => {
 
    return (
       <form className={form()}>
-         <div>
+         <div className="flex space-x-5">
             <DataInput
                legend="Inicio"
                id="begin"

@@ -2,11 +2,10 @@ import { DataContextProvider } from './data/contexts/DataContext';
 import { Home } from './pages/Home/Home';
 import { Header } from './ui/components/Header/Header';
 import { Sidenav } from './ui/components/Sidenav/Sidenav';
-import { section } from './ui/styles/sectionStyles';
 
 function App() {
    return (
-      <section className={section()}>
+      <section className="bg-color-4 m-0 text-color-2 font-sans">
          <DataContextProvider>
             <section className="grid space-y-5 p-5">
                <Sidenav />
