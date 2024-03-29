@@ -1,6 +1,11 @@
 import React from 'react';
 import { VariantProps } from 'tailwind-variants';
-import { form, inputStyle, labelStyle } from '../../ui/styles/formStyles';
+import {
+   buttonStyle,
+   form,
+   inputStyle,
+   labelStyle,
+} from '../../ui/styles/formStyles';
 
 export interface FormProps extends VariantProps<typeof form> {}
 
@@ -11,4 +16,10 @@ export interface DataInputProps
       VariantProps<typeof inputStyle> {
    id: string;
    legend: string;
+}
+
+export interface ButtonProps
+   extends React.ComponentProps<'button'>,
+      VariantProps<typeof buttonStyle> {
+   n: number;
 }
