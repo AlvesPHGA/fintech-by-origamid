@@ -1,7 +1,9 @@
+import { ButtonProps } from '../../../data/@types/IForm';
 import { UseData } from '../../../data/contexts/DataContext';
 import { formateDate, monthName } from '../../../data/services/functions/fData';
+import { buttonStyle } from '../../styles/formStyles';
 
-export const Button = ({ n }: { n: number }) => {
+export const Button = ({ n }: ButtonProps) => {
    const { setBegin, setEnd } = UseData();
 
    function setMonth(n: number) {
@@ -15,5 +17,9 @@ export const Button = ({ n }: { n: number }) => {
       setEnd(formateDate(lastDay));
    }
 
-   return <button onClick={() => setMonth(n)}>{monthName(n)}</button>;
+   return (
+      <button className={buttonStyle()} onClick={() => setMonth(n)}>
+         {monthName(n)}
+      </button>
+   );
 };
