@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { DataContextProps, SalesProps } from '../@types/IDataContext';
+import { getDataOld } from '../services/functions/fData';
 
 const DataContext = React.createContext<DataContextProps | null>(null);
 
@@ -11,16 +12,6 @@ export const UseData = () => {
 
    return context;
 };
-
-function getDataOld(n: number) {
-   const date = new Date();
-   date.setDate(date.getDate() - n);
-   const dd = String(date.getDate()).padStart(2, '0');
-   const mm = String(date.getMonth() + 1).padStart(2, '0');
-   const yyyy = String(date.getFullYear());
-
-   return `${yyyy}-${mm}-${dd}`;
-}
 
 export const DataContextProvider = ({ children }: React.PropsWithChildren) => {
    const [begin, setBegin] = React.useState(getDataOld(15));
