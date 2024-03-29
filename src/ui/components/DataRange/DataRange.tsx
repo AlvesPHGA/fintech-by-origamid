@@ -1,10 +1,9 @@
-import React from 'react';
 import { DataInput } from '../Form/DataInput';
 import { form } from '../../styles/formStyles';
+import { UseData } from '../../../data/contexts/DataContext';
 
 export const DataRange = () => {
-   const [begin, setBegin] = React.useState('');
-   const [end, setEnd] = React.useState('');
+   const { begin, setBegin, end, setEnd } = UseData();
 
    return (
       <form className={form()}>

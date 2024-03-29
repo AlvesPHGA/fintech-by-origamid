@@ -2,6 +2,10 @@ export interface DataContextProps {
    data: SalesProps[] | null;
    load: boolean;
    error: string | null;
+   begin: string;
+   setBegin: React.Dispatch<React.SetStateAction<string>>;
+   end: string;
+   setEnd: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface SalesProps {
