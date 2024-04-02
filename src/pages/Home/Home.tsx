@@ -7,9 +7,9 @@ export const Home = () => {
 
    return (
       <section className="pt-10">
-         <div className="flex space-x-5">
+         <div className="flex space-x-5 text-2xl font-semibold">
             <div className="bg-white py-2.5 px-5 rounded-[1.25rem]">
-               <h2>Vendas</h2>
+               <h2 className="text-2xl mb-2.5 text-color-1">Vendas</h2>
                <span>
                   {data
                      .filter((d) => d.status !== 'falha')
@@ -21,7 +21,7 @@ export const Home = () => {
                </span>
             </div>
             <div className="bg-white py-2.5 px-5 rounded-[1.25rem]">
-               <h2>Recebido</h2>
+               <h2 className="text-2xl mb-2.5 text-color-1">Recebido</h2>
                <span>
                   {data
                      .filter((d) => d.status === 'pago')
@@ -33,7 +33,7 @@ export const Home = () => {
                </span>
             </div>
             <div className="bg-white py-2.5 px-5 rounded-[1.25rem]">
-               <h2>Processando</h2>
+               <h2 className="text-2xl mb-2.5 text-color-1">Processando</h2>
                <span>
                   {data
                      .filter((d) => d.status === 'processando')
