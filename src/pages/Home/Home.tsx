@@ -6,9 +6,9 @@ export const Home = () => {
    if (data === null) return null;
 
    return (
-      <section>
-         <div>
-            <div>
+      <section className="pt-10">
+         <div className="flex space-x-5">
+            <div className="bg-white py-2.5 px-5 rounded-[1.25rem]">
                <h2>Vendas</h2>
                <span>
                   {data
@@ -20,7 +20,7 @@ export const Home = () => {
                      })}
                </span>
             </div>
-            <div>
+            <div className="bg-white py-2.5 px-5 rounded-[1.25rem]">
                <h2>Recebido</h2>
                <span>
                   {data
@@ -32,7 +32,7 @@ export const Home = () => {
                      })}
                </span>
             </div>
-            <div>
+            <div className="bg-white py-2.5 px-5 rounded-[1.25rem]">
                <h2>Processando</h2>
                <span>
                   {data
