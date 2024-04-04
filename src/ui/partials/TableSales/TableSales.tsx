@@ -1,16 +1,12 @@
 import { UseData } from '../../../data/contexts/DataContext';
+import { THead } from '../../components/Table/Thead';
 
 export const TableSales = () => {
    const { data } = UseData();
 
    return (
       <table>
-         <thead className="text-left">
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Valor</th>
-            <th>Status</th>
-         </thead>
+         <THead />
          <tbody>
             {data!.map((sale) => (
                <tr key={sale.id}>
