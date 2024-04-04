@@ -1,12 +1,16 @@
 import { BlockInformationProps } from '../../../data/@types/Home/IResume';
+import {
+   blockInformationStyle,
+   legendBlockInformationStyle,
+} from '../../styles/Home/resumeStyles';
 
 export const BlockInformation = ({
    title,
    children,
 }: BlockInformationProps) => {
    return (
-      <div className="bg-white py-2.5 px-5 rounded-[1.25rem]">
-         <h2 className="text-2xl mb-2.5 text-color-1">{title}</h2>
+      <div className={blockInformationStyle()}>
+         <h2 className={legendBlockInformationStyle()}>{title}</h2>
          <span>{children}</span>
       </div>
    );
