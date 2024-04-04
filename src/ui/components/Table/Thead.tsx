@@ -1,10 +1,12 @@
+import { TH } from './TH';
+
 export const THead = () => {
    return (
       <thead className="text-left">
-         <th>ID</th>
-         <th>Nome</th>
-         <th>Valor</th>
-         <th>Status</th>
+         <TH>ID</TH>
+         <TH>Nome</TH>
+         <TH>Valor</TH>
+         <TH>Status</TH>
       </thead>
    );
 };
