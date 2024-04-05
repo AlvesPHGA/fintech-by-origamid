@@ -1,9 +1,6 @@
-import React from 'react';
+import { linkNavProps } from '../../../data/@types/Nav/INav';
+import { linkNavStyle } from '../../styles/Nav/NavStyles';
 
-interface LinkNavProps extends React.ComponentProps<'a'> {
-   link?: string;
-}
-
-export const LinkNav = ({ link, ...props }: LinkNavProps) => {
-   return <a className="block text-left py-1 flex-1" href={link} {...props} />;
+export const LinkNav = ({ link, ...props }: linkNavProps) => {
+   return <a className={linkNavStyle()} href={link} {...props} />;
 };
