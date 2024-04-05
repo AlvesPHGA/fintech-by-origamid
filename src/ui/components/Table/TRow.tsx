@@ -1,11 +1,5 @@
+import { TRowProps } from '../../../data/@types/Sales/ISales';
 import { TCell } from './TCell';
-
-interface TRowProps {
-   id: string;
-   name: string;
-   price: number;
-   status: string;
-}
 
 export const TRow = ({ id, name, price, status }: TRowProps) => {
    return (
