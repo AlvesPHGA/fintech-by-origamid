@@ -5,5 +5,5 @@ interface LinkNavProps extends React.ComponentProps<'a'> {
 }
 
 export const LinkNav = ({ link, ...props }: LinkNavProps) => {
-   return <a href={link} {...props} />;
+   return <a className="block text-left py-1 flex-1" href={link} {...props} />;
 };
