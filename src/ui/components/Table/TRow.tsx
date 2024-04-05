@@ -9,7 +9,7 @@ interface TRowProps {
 
 export const TRow = ({ id, name, price, status }: TRowProps) => {
    return (
-      <tr>
+      <tr className="border-b-2 border-color-3 odd:bg-white">
          <TCell>{id}</TCell>
          <TCell>{name}</TCell>
          <TCell>
