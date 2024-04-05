@@ -1,3 +1,3 @@
-export const TCell = ({ children, ...props }: { children: string }) => {
+export const TCell = ({ ...props }) => {
    return <td {...props} />;
 };
