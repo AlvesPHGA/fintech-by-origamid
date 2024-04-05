@@ -5,7 +5,9 @@ import { TCell } from './TCell';
 export const TRow = ({ id, name, price, status }: TRowProps) => {
    return (
       <tr className={trowStyle()}>
-         <TCell>{id}</TCell>
+         <a href="">
+            <TCell>{id}</TCell>
+         </a>
          <TCell>{name}</TCell>
          <TCell>
             {price.toLocaleString('pt-br', {
