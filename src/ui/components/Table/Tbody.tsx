@@ -11,6 +11,7 @@ export const TBody = () => {
                id={sale.id}
                name={sale.nome}
                price={sale.preco}
+               status={sale.status}
             />
          ))}
       </tbody>
