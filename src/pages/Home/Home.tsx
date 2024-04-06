@@ -1,4 +1,5 @@
 import { UseData } from '../../data/contexts/DataContext';
+import { GraphicSales } from '../../ui/partials/GraphicSales/GraphicSales';
 import { Resume } from '../../ui/partials/Resume/Resume';
 
 export const Home = () => {
@@ -9,6 +10,7 @@ export const Home = () => {
    return (
       <section className="pt-10">
          <Resume />
+         <GraphicSales data={data} />
       </section>
    );
 };
