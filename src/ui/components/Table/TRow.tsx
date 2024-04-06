@@ -1,6 +1,9 @@
+import { NavLink } from 'react-router-dom';
 import { TRowProps } from '../../../data/@types/Sales/ISales';
 import { trowStyle } from '../../styles/Sales/TableStyle';
 import { TCell } from './TCell';
+
+import { Link } from 'lucide-react';
 
 export const TRow = ({ id, name, price, status }: TRowProps) => {
    return (
@@ -16,6 +19,11 @@ export const TRow = ({ id, name, price, status }: TRowProps) => {
             })}
          </TCell>
          <TCell>{status}</TCell>
+         <TCell>
+            <NavLink to={id}>
+               <Link />
+            </NavLink>
+         </TCell>
       </tr>
    );
 };
