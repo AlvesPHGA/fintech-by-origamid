@@ -11,10 +11,16 @@ export const Sale = () => {
 
    if (data === null) return null;
    return (
-      <section className="border mt-5 space-y-5">
+      <section className="mt-5 space-y-3">
          <InfoPersonField legend="ID" info={data.id} />
          <InfoPersonField legend="Nome" info={data.nome} />
-         <InfoPersonField legend="Preço" info={data.preco} />
+         <InfoPersonField
+            legend="Preço"
+            info={data.preco.toLocaleString('pt-br', {
+               style: 'currency',
+               currency: 'BRL',
+            })}
+         />
          <InfoPersonField legend="Status" info={data.status} />
          <InfoPersonField legend="Pagamento" info={data.pagamento} />
       </section>
