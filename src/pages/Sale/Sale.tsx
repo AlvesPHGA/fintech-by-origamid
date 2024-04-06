@@ -16,7 +16,6 @@ export const Sale = () => {
    if (data === null) return null;
    return (
       <section className="mt-5 space-y-3">
-         <Load />
          <InfoPersonField legend="ID" info={data.id} />
          <InfoPersonField legend="Nome" info={data.nome} />
          <InfoPersonField
