@@ -3,9 +3,11 @@ import { useFetch } from '../../data/hooks/useFetch';
 import { SalesProps } from '../../data/@types/IDataContext';
 import { InfoPersonField } from '../../ui/components/Sale/InfoPersonField';
 
+type SalesWithDataProps = Omit<SalesProps, 'data'>;
+
 export const Sale = () => {
    const { id } = useParams();
-   const { data, load } = useFetch<SalesProps>(
+   const { data, load } = useFetch<SalesWithDataProps>(
       `https://data.origamid.dev/vendas/${id}`,
    );
 
