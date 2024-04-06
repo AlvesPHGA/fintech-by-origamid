@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useFetch } from '../../data/hooks/useFetch';
 import { SalesProps } from '../../data/@types/IDataContext';
 import { InfoPersonField } from '../../ui/components/Sale/InfoPersonField';
+import { Load } from '../../ui/components/Load/Load';
 
 type SalesWithDataProps = Omit<SalesProps, 'data'>;
 
@@ -11,9 +12,11 @@ export const Sale = () => {
       `https://data.origamid.dev/vendas/${id}`,
    );
 
+   if (load) return <Load />;
    if (data === null) return null;
    return (
       <section className="mt-5 space-y-3">
+         <Load />
          <InfoPersonField legend="ID" info={data.id} />
          <InfoPersonField legend="Nome" info={data.nome} />
          <InfoPersonField
