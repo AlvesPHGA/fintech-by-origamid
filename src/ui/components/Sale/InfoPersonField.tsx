@@ -1,6 +1,6 @@
 interface InfoPersonFieldProps {
    legend: string;
-   info: string;
+   info: string | number;
 }
 
 export const InfoPersonField = ({ legend, info }: InfoPersonFieldProps) => {
