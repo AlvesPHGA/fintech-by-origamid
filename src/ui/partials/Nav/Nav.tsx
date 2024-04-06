@@ -13,14 +13,14 @@ import { iconLinkStyle, navStyle } from '../../styles/Nav/NavStyles';
 export const Nav = () => {
    return (
       <nav className={navStyle()}>
-         <LinkNav link="#">
+         <LinkNav link="/">
             <div className={iconLinkStyle()}>
                <Home />
             </div>
             Resumo
          </LinkNav>
 
-         <LinkNav link="#">
+         <LinkNav link="/sales">
             <div className={iconLinkStyle()}>
                <BadgeDollarSign />
             </div>
