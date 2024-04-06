@@ -1,10 +1,5 @@
 import React from 'react';
 
-interface FetchProps {
-   url: RequestInfo | URL;
-   options?: RequestInit;
-}
-
 export function useFetch<T>(url: RequestInfo | URL, options?: RequestInit) {
    const [data, setData] = React.useState<T | null>(null);
    const [load, setLoad] = React.useState(false);
