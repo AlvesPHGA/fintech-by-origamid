@@ -12,3 +12,10 @@ export interface BlockInformationProps
    title: string;
    children: string;
 }
+
+export interface SalesDataProps {
+   data: string;
+   pago: number;
+   processando: number;
+   falha: number;
+}
