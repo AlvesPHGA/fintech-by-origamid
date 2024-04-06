@@ -7,33 +7,9 @@ import {
    XAxis,
    YAxis,
 } from 'recharts';
+
 import { SalesProps } from '../../../data/@types/IDataContext';
-
-interface SalesDataProps {
-   data: string;
-   pago: number;
-   processando: number;
-   falha: number;
-}
-
-function dataTransform(data: SalesProps[]): SalesDataProps[] {
-   const days = data.reduce((acc: { [key: string]: SalesDataProps }, item) => {
-      const day = item.data.split(' ')[0];
-
-      if (!acc[day]) {
-         acc[day] = {
-            data: day,
-            pago: 0,
-            falha: 0,
-            processando: 0,
-         };
-      }
-      acc[day][item.status] += item.preco;
-      return acc;
-   }, {});
-
-   return Object.values(days);
-}
+import { dataTransform } from '../../../data/services/functions/dataTransform';
 
 export const GraphicSales = ({ data }: { data: SalesProps[] }) => {
    const transform = dataTransform(data);
