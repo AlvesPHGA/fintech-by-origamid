@@ -9,33 +9,39 @@ import {
 } from 'recharts';
 import { SalesProps } from '../../../data/@types/IDataContext';
 
-const dataGraphic = [
-   {
-      data: '2024-02-20',
-      pago: 6000,
-      processando: 3000,
-      falha: 2000,
-   },
-   {
-      data: '2024-02-21',
-      pago: 10000,
-      processando: 3500,
-      falha: 500,
-   },
+interface SalesDataProps {
+   data: string;
+   pago: number;
+   processando: number;
+   falha: number;
+}
 
-   {
-      data: '2024-02-22',
-      pago: 2000,
-      processando: 2000,
-      falha: 2500,
-   },
-];
+function dataTransform(data: SalesProps[]): SalesDataProps[] {
+   const days = data.reduce((acc: { [key: string]: SalesDataProps }, item) => {
+      const day = item.data.split(' ')[0];
+
+      if (!acc[day]) {
+         acc[day] = {
+            data: day,
+            pago: 0,
+            falha: 0,
+            processando: 0,
+         };
+      }
+      acc[day][item.status] += item.preco;
+      return acc;
+   }, {});
+
+   return Object.values(days);
+}
 
 export const GraphicSales = ({ data }: { data: SalesProps[] }) => {
+   const transform = dataTransform(data);
+
    return (
       <ResponsiveContainer width="99%" height={400}>
          <LineChart
-            data={dataGraphic}
+            data={transform}
             margin={{
                top: 5,
                right: 20,
