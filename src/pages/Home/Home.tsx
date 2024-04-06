@@ -8,7 +8,7 @@ export const Home = () => {
    if (data === null) return null;
 
    return (
-      <section className="pt-10">
+      <section className="pt-10 space-y-5">
          <Resume />
          <GraphicSales data={data} />
       </section>
