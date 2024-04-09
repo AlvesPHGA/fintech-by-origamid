@@ -9,7 +9,7 @@ import { Footer } from './ui/components/Footer/Footer';
 
 function App() {
    return (
-      <section className="bg-color-4 m-0 text-color-2 font-sans h-[100%]">
+      <section className="bg-color-4 m-0 text-color-2 font-sans h-full">
          <BrowserRouter>
             <DataContextProvider>
                <div className="grid space-y-5 p-5 grid-cols-[300px_1fr] space-x-8 max-w-[1200px] mx-auto">
