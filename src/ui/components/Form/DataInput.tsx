@@ -4,7 +4,7 @@ import { inputStyle, labelStyle } from '../../styles/formStyles';
 export const DataInput = ({ legend, id, ...props }: DataInputProps) => {
    return (
       <div className="space-y-5">
-         <label htmlFor={id} className={labelStyle()}>
+         <label htmlFor={id} className={labelStyle({ type: '_data' })}>
             {legend}
          </label>
          <input

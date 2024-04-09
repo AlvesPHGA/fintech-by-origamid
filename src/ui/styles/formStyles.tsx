@@ -5,7 +5,13 @@ export const form = tv({
 });
 
 export const labelStyle = tv({
-   base: 'block space-x-2.5 font-semibold text-base text-color-2 px-3 py-2.5 bg-color-4 rounded-[1.25rem]',
+   base: 'block space-x-2.5 font-semibold text-base text-color-2',
+
+   variants: {
+      type: {
+         _data: 'bg-color-4 rounded-[1.25rem] px-3 py-2.5',
+      },
+   },
 });
 
 export const inputStyle = tv({
