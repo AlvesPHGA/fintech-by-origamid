@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants';
 
 export const navStyle = tv({
-   base: 'mt-5 px-5 space-y-5 lap:flex lap:items-center lap:mt-10 lap:space-y-0 lap:px-0 lap:mx-auto lap:w-fit lap:gap-5',
+   base: 'mt-5 px-5 space-y-5 lap:flex lap:items-center lap:mt-10 lap:space-y-0 lap:px-0 lap:mx-auto lap:w-fit lap:gap-5 tablet:grid tablet:grid-cols-3',
 });
 
 export const linkNavStyle = tv({
