@@ -21,6 +21,14 @@ export default {
                },
             },
          },
+
+         screens: {
+            lap: { max: '1024px' },
+            tablet: { max: '768px' },
+            ml: { max: '425px' },
+            mm: { max: '375px' },
+            ms: { max: '320px' },
+         },
       },
    },
    plugins: [],
