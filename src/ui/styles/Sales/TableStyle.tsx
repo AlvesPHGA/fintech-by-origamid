@@ -11,6 +11,7 @@ export const tcellStyle = tv({
       cell: {
          def: 'ml:px-1',
          id: 'ml:truncate ml:max-w-24 ml:pl-0.5 mm:max-w-20',
+         status: 'ms:truncate ms:max-w-16',
       },
    },
 

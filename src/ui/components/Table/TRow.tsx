@@ -16,10 +16,10 @@ export const TRow = ({ id, name, price, status }: TRowProps) => {
                currency: 'BRL',
             })}
          </TCell>
-         <TCell>{status}</TCell>
+         <TCell cell="status">{status}</TCell>
          <TCell>
             <NavLink to={id}>
-               <Link />
+               <Link className="size-3" />
             </NavLink>
          </TCell>
       </tr>
