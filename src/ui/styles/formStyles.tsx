@@ -1,7 +1,7 @@
 import { tv } from 'tailwind-variants';
 
 export const form = tv({
-   base: 'p-5 rounded-[1.25rem] bg-white',
+   base: 'p-5 rounded-[1.25rem] bg-white mm:w-full mm:flex mm:items-center mm:justify-center mm:p-1.5',
 });
 
 export const labelStyle = tv({

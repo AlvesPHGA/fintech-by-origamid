@@ -10,7 +10,7 @@ export const tcellStyle = tv({
    variants: {
       cell: {
          def: 'ml:px-1',
-         id: 'ml:truncate ml:max-w-24 ml:pl-0.5',
+         id: 'ml:truncate ml:max-w-24 ml:pl-0.5 mm:max-w-20',
       },
    },
 
