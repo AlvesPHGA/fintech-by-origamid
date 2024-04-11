@@ -1,6 +1,12 @@
 import React from 'react';
 import { VariantProps } from 'tailwind-variants';
-import { linkNavStyle } from '../../../ui/styles/Nav/NavStyles';
+import { linkNavStyle, navStyle } from '../../../ui/styles/Nav/NavStyles';
+
+export interface NavProps
+   extends React.ComponentProps<'nav'>,
+      VariantProps<typeof navStyle> {
+   active?: boolean;
+}
 
 export interface linkNavProps
    extends React.ComponentProps<'a'>,

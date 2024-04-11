@@ -1,3 +1,4 @@
+import { NavProps } from '../../../data/@types/Nav/INav';
 import { LinkNav } from '../../components/LinkNav/LinkNav';
 
 import {
@@ -9,11 +10,6 @@ import {
    LogOut,
 } from 'lucide-react';
 import { iconLinkStyle, navStyle } from '../../styles/Nav/NavStyles';
-import { ComponentProps } from 'react';
-
-interface NavProps extends ComponentProps<'nav'> {
-   active?: boolean;
-}
 
 export const Nav = ({ active }: NavProps) => {
    return (
