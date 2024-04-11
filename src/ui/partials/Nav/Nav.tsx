@@ -9,10 +9,15 @@ import {
    LogOut,
 } from 'lucide-react';
 import { iconLinkStyle, navStyle } from '../../styles/Nav/NavStyles';
+import { ComponentProps } from 'react';
 
-export const Nav = () => {
+interface NavProps extends ComponentProps<'nav'> {
+   active?: boolean;
+}
+
+export const Nav = ({ active }: NavProps) => {
    return (
-      <nav className={navStyle()}>
+      <nav data-active={active} className={navStyle({ active })}>
          <LinkNav link="/">
             <div className={iconLinkStyle()}>
                <Home />
