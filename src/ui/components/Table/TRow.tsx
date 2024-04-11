@@ -8,9 +8,7 @@ import { Link } from 'lucide-react';
 export const TRow = ({ id, name, price, status }: TRowProps) => {
    return (
       <tr className={trowStyle()}>
-         <a href="">
-            <TCell>{id}</TCell>
-         </a>
+         <TCell cell="id">{id}</TCell>
          <TCell>{name}</TCell>
          <TCell>
             {price.toLocaleString('pt-br', {
