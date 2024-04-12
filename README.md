@@ -1,30 +1,18 @@
-# React + TypeScript + Vite
+# Fintech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About project
 
-Currently, two official plugins are available:
+This project is a small project of Origamid Institute, this project consists a dashboard with some information of finances.
+The principal subject this project is TypeScript as implement a project.
+It project was used a api external, of the institution itself, to content project.
+Here was used Tailwind CSS as style, used too React components to better organization, and was used Tailwind Variants to leave code very clean.
+Was addressed some hooks as useStats and useEffect, also was created some hooks to fetch and context, also routers.
+The project have to all devices of present.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+-  React
+-  TypeScript
+-  Tailwind CSS
+-  Tailwind Variants
+-  Lucide Icons
