@@ -6,10 +6,11 @@ import { Header } from './ui/components/Header/Header';
 import { Sidenav } from './ui/components/Sidenav/Sidenav';
 import { Sale } from './pages/Sale/Sale';
 import { Footer } from './ui/components/Footer/Footer';
+import { ContainerStyle } from './ui/styles/Global/GlobalStyles';
 
 function App() {
    return (
-      <section className="bg-color-4 m-0 text-color-2 font-sans h-full lap:w-full lap:px-4 ms:px-1">
+      <section className={ContainerStyle()}>
          <BrowserRouter>
             <DataContextProvider>
                <div className="grid space-y-5 p-5 grid-cols-[300px_1fr] space-x-8 max-w-[1200px] mx-auto lap:w-full lap:px-0 lap:flex lap:flex-col lap:space-x-0 ms:px-0.5">

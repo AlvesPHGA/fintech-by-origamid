@@ -1,9 +1,12 @@
+import React from 'react';
 import { ButtonProps } from '../../../data/@types/IForm';
 import { UseData } from '../../../data/contexts/DataContext';
 import { formateDate, monthName } from '../../../data/services/functions/fData';
 import { buttonStyle } from '../../styles/formStyles';
 
 export const Button = ({ n }: ButtonProps) => {
+   const [activeButton, setActiveButton] = React.useState(false);
+
    const { setBegin, setEnd } = UseData();
 
    const buttons = document.querySelectorAll('button');
@@ -19,18 +22,19 @@ export const Button = ({ n }: ButtonProps) => {
       setEnd(formateDate(lastDay));
    }
 
-   const handleClick: React.MouseEventHandler<HTMLButtonElement> = (ev) => {
+   const handleActiveBtn: React.MouseEventHandler<HTMLButtonElement> = () => {
       buttons.forEach((b) => b.classList.remove('border-color-2'));
-      ev.currentTarget.classList.add('border-color-2');
+      setActiveButton(!activeButton);
    };
 
    return (
       <button
-         className={buttonStyle()}
+         data-activeBtn={activeButton}
+         className={buttonStyle({ activeButton })}
          onClick={() => {
             setMonth(n);
          }}
-         onMouseUp={handleClick}
+         onMouseUp={handleActiveBtn}
       >
          {monthName(n)}
       </button>

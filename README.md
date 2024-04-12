@@ -16,3 +16,5 @@ The project have to all devices of present.
 -  Tailwind CSS
 -  Tailwind Variants
 -  Lucide Icons
+
+## Screenshots

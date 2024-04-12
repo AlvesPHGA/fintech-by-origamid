@@ -20,4 +20,15 @@ export const inputStyle = tv({
 
 export const buttonStyle = tv({
    base: `py-2.5 px-5 bg-color-3 rounded-[1.25rem] text-color-2 font-semibold capitalize border-2 hover:border-color-2 transition`,
+
+   variants: {
+      activeButton: {
+         false: 'border-2',
+         true: 'border-color-2',
+      },
+   },
+
+   defaultVariants: {
+      activeButton: false,
+   },
 });
