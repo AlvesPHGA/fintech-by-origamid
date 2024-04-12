@@ -17,4 +17,9 @@ The project have to all devices of present.
 -  Tailwind Variants
 -  Lucide Icons
 
-## Screenshots
+## Screens
+
+<img src='./src/assets/foto1.png'/>
+<img src='./src/assets/foto2.png'/>
+<img src='./src/assets/foto3.png'/>
+<img src='./src/assets/foto4.png'/>
