@@ -6,11 +6,11 @@ import { Header } from './ui/components/Header/Header';
 import { Sidenav } from './ui/components/Sidenav/Sidenav';
 import { Sale } from './pages/Sale/Sale';
 import { Footer } from './ui/components/Footer/Footer';
-import { ContainerStyle } from './ui/styles/Global/GlobalStyles';
+import { Section } from './ui/components/Global/Global';
 
 function App() {
    return (
-      <section className={ContainerStyle()}>
+      <Section>
          <BrowserRouter>
             <DataContextProvider>
                <div className="grid space-y-5 p-5 grid-cols-[300px_1fr] space-x-8 max-w-[1200px] mx-auto lap:w-full lap:px-0 lap:flex lap:flex-col lap:space-x-0 ms:px-0.5">
@@ -27,7 +27,7 @@ function App() {
             </DataContextProvider>
          </BrowserRouter>
          <Footer />
-      </section>
+      </Section>
    );
 }
 
